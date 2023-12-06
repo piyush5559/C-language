@@ -54,10 +54,18 @@ int main() {
     scanf("%d", &boolean);
 
     if (boolean == 1) {
-        printf("Silver or Gold\n");
-	scanf("%s",lastcol[0]);
+        lastcolor:
+        printf("Silver or Gold ? \n");
+        scanf("%s",lastcol[0]);
     } else if (boolean == 0) {
-        printf("Your resistance is %ld Ω\n", resistance);
+        printf("Your resistance is %ld Ω\n", resistance);                                   }
+    if(strcmp("Silver",lastcol[0])==0)                                                      {                                                                                               printf("Your resistance is %ld  \u00B1 10%% \n",resistance);                    }
+    else if(strcmp("Gold",lastcol[0])==0)
+    {
+            printf("Your resistance is %ld  \u00B1 5%% \n",resistance);                                                                                                             }
+    else                                                                                    {
+            printf("plz re-enter the last color : ");
+            goto lastcolor;
     }
 
     return 0;
